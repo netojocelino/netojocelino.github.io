@@ -1,0 +1,109 @@
+@font-face{  font-family: 'Lato';
+  font-style: normal;
+  font-weight: 400;
+  src: local('Lato Regular'), local('Lato-Regular'), url(http://fonts.gstatic.com/s/lato/v11/ayfRv9GMahGqd-q6YxHjSg.woff2) format('woff2'), url(http://fonts.gstatic.com/s/lato/v11/1bHRUMxmJHoup12DnI9XmQ.woff) format('woff');
+}
+*{ margin: 0; padding: 0; text-decoration: none; list-style: none; }
+a,a:visited{ color: #7f8c8d; }
+a:hover{ color:#34495e; }
+html, body{ background: #000; color: #fff;}
+
+/* checkbox */
+input[type="checkbox"]{ display: none; }
+
+/* nav */
+.icon{
+	display: block;
+	width: 50px;
+	height: 100px;
+}
+.icon img{
+	width: 100%;
+	border-radius: 50%;
+}
+.f-left{ float: left; margin-left: 10%; }
+.f-right{ float: right; margin-right: 10%; }
+.mostra{
+	position: fixed;
+	top: 0; bottom: 0; left: 0; right: 0;
+	z-index: 9999999; opacity: 0;
+	transition: opacity 400ms ease-in pointer-events: none;
+}
+.mostra:target{
+	opacity: 1; pointer-events: auto;
+}
+.mostra > div{
+	width: 300px;
+	position: relative;
+;	margin: auto;
+	padding: 5px 20px 13px 20px;
+	background: #ecf0f1;
+}
+#mostra-apps:checked + nav ul li #idapp { height: 60px; border-left: 2px solid green; }
+
+/* sub-sub menu */
+#idapp{ width: 400px; }
+
+
+
+/* centralizar marca */
+#middle{
+  position: absolute;
+  top: 0; right: 0; bottom: 0; left: 0;
+  margin: auto;
+  height: 9rem; /*65px;*/
+  width: 13rem;/*215px;*/
+  overflow: hidden;
+}
+#middle h1{ color: #2980b9; text-align: center; line-height: 30px; font-size: 30px; font-family: 'Lato', sans-serif; }
+#middle h1:hover{ color: #3498db; }
+#middle h1 sup a{ color: #2c3e50; oine-height: 10px; font-size: 80%; }
+#middle h1 sup a:hover{ color: #f1f1f1; }
+#middle legend{ color: #16a085; text-align: right; font-size: 14px;}
+#middle legend b{ color: #16a09f; font-weight: bold; }
+#middle legend span{ animation: pisca 1s linear infinite; color: white; }
+
+
+
+/* acionar modal * /
+ .modal > #help, .modal > #leitor, .modal > #dados{
+	top: 0; right: 0; bottom: 0; left: 0;
+	color: black;
+	width: 300px;
+	position: relative;
+	margin: 10% auto;
+	padding: 5px 20px 13px 20px;
+	bakground: #ecf0f1;
+	text-align: center;
+}
+*/ 
+.modal > #hp, .modal > #ld, .modal > #da{
+	width: 300px;
+	position: relative;
+	max-width: 320px;
+	margin: 10% auto;
+	background: white;
+	color: black;
+	text-align: center;
+	padding: 3px 2px;
+	border-radius: 5px;
+}
+.modal > #hp .fechar, .modal > #ld .fechar,  .modal > #da .fechar{
+	color: #e74c3c;
+	font-align: right;
+	position: absolute;
+	width: 20px;
+	height: 20px;
+	line-height: 20px;
+	font-size: 20px;
+	background: #2c3e50;
+	padding: 5px;
+	border-radius: 100%;
+	margin-right: 20px;
+	top: -10px;
+	right: -30px;
+}
+
+
+/* animações  */
+@keyframes pisca{ to{opacity: 1.0;} from{ opacity: 0.0; } }
