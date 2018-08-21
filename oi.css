@@ -51,8 +51,8 @@ input[type="checkbox"]{ display: none; }
   position: absolute;
   top: 0; right: 0; bottom: 0; left: 0;
   margin: auto;
-  height: 9rem; /*65px;*/
-  width: 13rem;/*215px;*/
+  height: 8rem;/* 9rem; 65px;*/
+  width: 16rem; /*13rem; 215px;*/
   overflow: hidden;
 }
 #middle h1{ color: #2980b9; text-align: center; line-height: 30px; font-size: 30px; font-family: 'Lato', sans-serif; }
@@ -76,7 +76,69 @@ input[type="checkbox"]{ display: none; }
 	bakground: #ecf0f1;
 	text-align: center;
 }
-*/ 
+*/
+
+.modal{
+  position: absolute;
+  background: red;
+  width: 90%;
+  height: 90%;
+  z-index: 999;
+  margin-left: 5%;
+  margin-top: 2.5%;
+}
+.modal .modal-close{
+    position: absolute;
+    right: 0;
+    padding: 0.5rem 0.2rem;
+    margin: 0.75rem 0.75rem 0rem 0rem;
+}
+
+.modal .modal-close:before{
+  content: "X";
+}
+
+
+.modal .modal-content{
+  position: relative;
+  width: 90%;
+  margin: auto;
+  text-align: center;
+  height: 95%;
+}
+
+.modal .modal-content .modal-title{
+  margin-top: 2rem;
+  font-size: 2.5rem;
+}
+.modal .modal-content .modal-image{
+  max-height: 15rem;
+  margin: auto;
+  text-align: center;
+}
+.modal .modal-content .modal-paragraph{
+  font-size: 1.1rem;
+  line-height: 1.3rem;
+  text-align: justify;
+}
+.modal .modal-content .modal-printer{
+  padding: 0.3rem 0.7rem;
+  border: 0px solid;
+  box-shadow: 1px 1px 0px black;
+  font-size: 13px;
+}
+.modal .modal-content .modal-printer:hover,
+.modal .modal-content .modal-printer:active,
+.modal .modal-content .modal-printer:focus
+{
+  font-size: 0.7rem;
+  border: 1px solid #ccc;
+  box-shadow: 1px 1px 2px black;
+  font-size: 16px;
+  text-shadow: 1px 1px 0px #afafaf;
+}
+
+
 .modal > #hp, .modal > #ld, .modal > #da{
 	width: 300px;
 	position: relative;
