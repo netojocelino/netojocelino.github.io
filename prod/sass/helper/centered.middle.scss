@@ -1,0 +1,44 @@
+.centered-middle{
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  margin: auto;
+  height: 8rem;
+  width: 16rem;
+  overflow: hidden;
+
+  h1{
+    color: #2980b9;
+    text-align: center;
+    line-height: 30px;
+    font-size: 30px;
+    font-family: 'Lato', sans-serif;
+}
+  h1:hover{
+    color: #3498db;
+}
+  h1 sup a{
+    color: #2c3e50;
+    line-height: 10px;
+    font-size: 80%;
+}
+  h1 sup a:hover{
+    color: #f1f1f1;
+}
+  legend{
+    color: #16a085;
+    text-align: right;
+    font-size: 14px;}
+  legend b{
+    color: #16a09f;
+    font-weight: bold;
+  }
+  legend span{
+    animation: pisca 1s linear infinite;
+    color: white;
+}
+
+
+}
