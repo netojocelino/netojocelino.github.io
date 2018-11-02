@@ -1,5 +1,5 @@
 {
-  "name": "Jocelino Alves",
+  "name": "JocelinoAlves",
   "version": "0.0.1",
   "description": "A personal portfolio",
   "repository": {
@@ -8,6 +8,7 @@
   },
   "author": "Neto Jocelino",
   "devDependencies": {
+    "browser-sync": "^2.26.3",
     "gulp": "^4.0.0",
     "gulp-concat-css": "^3.1.0",
     "gulp-connect": "^5.6.1",
