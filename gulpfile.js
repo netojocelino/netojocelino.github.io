@@ -1,48 +1,51 @@
 "use strict";
-const NAME= "Jocelino Alves";
-const VERSION = "0.0.1";
 
+// MODULES IMPORTS
 const gulp = require("gulp");
 const sass = require("gulp-sass");
 const connect = require("gulp-connect");
-const mincss = require("gulp-concat-css");
 
-gulp.task('index', ['run','watch-index']);
-
-
-gulp.task('watch-index',()=>{
-  gulp.watch("./prod/**/*", ['run','sass-index']);
-});
-
-gulp.task('sass-index', ()=>{
-  console.log("Sass Index running");
-  return gulp.src("./prod/sass/**/*.scss")
-     .pipe(sass({
-       outputStyle: "compressed",
-       noCache: true
-     }).on('error', sass.logError))
-     .pipe(mincss())
-     .pipe(gulp.dest("./dist/css/index.css"))
-     .pipe(connect.reload())
-});
+// PATH IMPORTS
+const DEV_DIR = `./prod`;
+const DIST_DIR = `./dist`;
+const SASS_JUST_ROOT_DIR = `${DEV_DIR}/sass/*.scss`;
+const SASS_DIR = `${DEV_DIR}/sass/**/*.scss`;
+const CSS_DIR  = `${DIST_DIR}/css/`;
 
 
-
-gulp.task('run', ()=> {
-  return connect.server({
-    root: 'dist',
+// SERVER TASKS
+gulp.task('server', function(){
+  connect.server({
+    root: `${DIST_DIR}`,
     port: 1313,
     livereload: true
-  })
+  });
+});
+
+
+
+// STYLE TASKS
+gulp.task('inicio:sass', function() {
+  gulp.src(SASS_JUST_ROOT_DIR)
+     .pipe(
+       sass({ outputStyle: 'compressed' })
+           .on('error', sass.logError)
+     )
+     .pipe( gulp.dest(CSS_DIR) )
+     .pipe( connect.reload() );
+});
+
+
+
+
+gulp.task('inicio:watch', function(){
+  gulp.watch([SASS_DIR, ], ['inicio:sass']);
+  // gulp.watch(DIST_DIR, ['inicio:server']);
+  connect.reload();
 })
 
-gulp.task('default', ()=>{
-  console.log(`
-    Projeto Portfolio
-      **INDEX**
-       0   run:        run a server in localhost:1313
-       1   index:      run 1.*
-       1.1 sass-index: run sass production to css dist
+gulp.task('inicio', ['server','inicio:watch']);
 
-    `);
+gulp.task('default', function(){
+  console.log(`Its alive`);
 });
