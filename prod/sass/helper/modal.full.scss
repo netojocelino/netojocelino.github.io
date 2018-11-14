@@ -49,6 +49,12 @@
     text-align: center;
   }
 
+  .modal-content__card{
+    width: 30%;
+    display: inline-block;
+    margin: 0 5px;
+  }
+
   .modal-content.modal-content__list{
     max-height: 200px;
     height: 150px;
