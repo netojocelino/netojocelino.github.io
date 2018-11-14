@@ -37,14 +37,19 @@ gulp.task('inicio:sass', function() {
 
 
 
+gulp.task('inicio:html', function(){
+  gulp.watch([DIST_DIR], function(){
+    connect.reload();
+  });
+});
 
 gulp.task('inicio:watch', function(){
-  gulp.watch([SASS_DIR, ], ['inicio:sass']);
+  gulp.watch([SASS_DIR], ['inicio:sass']);
   // gulp.watch(DIST_DIR, ['inicio:server']);
   connect.reload();
 })
 
-gulp.task('inicio', ['server','inicio:watch']);
+gulp.task('inicio', ['server','inicio:watch', 'inicio:html']);
 
 gulp.task('default', function(){
   console.log(`Its alive`);
