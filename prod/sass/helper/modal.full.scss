@@ -13,6 +13,16 @@
   background-color: $quarter-light;
   transition: 0.2s linear all;
 
+  a{
+    color: #000;
+    text-shadow: 0px 0px 1px #fff;
+    &:hover{
+      color: #fff;
+      text-shadow: 0px 0px 1px #000;
+      text-decoration: underline;
+    }
+  }
+
   &.modal__off{
     opacity: 0;
     width: 0%;
@@ -45,14 +55,28 @@
     width: 100%;
     height: 100%;
     margin: auto;
-    overflow: hidden;
+    overflow-x: hidden;
+    overflow-y: overlay;
     text-align: center;
   }
 
   .modal-content__card{
     width: 30%;
+    height: 25rem;
+    overflow: overlay;
     display: inline-block;
-    margin: 0 5px;
+    margin: 4px;//0 4px;
+    background-color: #006493;
+    padding: 11px 6px;
+    border-radius: 4px;
+
+    &__off{
+      display: none;
+    }
+  }
+  .modal-content__card--expand{
+    width: 100%;
+    height: 100%;
   }
 
   .modal-content.modal-content__list{
@@ -66,11 +90,24 @@
     text-align: center;
     color: $secondary-light;
   }
+  .modal-content .modal-content-title{
+    cursor: pointer;
+  }
 
-  .modal-content .modal-image{
-    max-width: 30%;
+  .modal-content .modal-content-images{
+    max-width: 100%;
+    width: 100%;
     max-height: 340px;
     margin: 0 2px;
+    img{
+      width: 30%;
+      display: inline-block;
+    }
+  }
+
+  .modal-content .modal-content-body{
+    width: 80%;
+    margin: auto;
   }
 
   .modal-content .modal-paragraph{
