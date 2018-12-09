@@ -68,7 +68,7 @@ Esse é um típico exemplo de site a não ser desenvolvido.
 
 
 
-
+/*
 	const getURL = (url) => {
 		url = url.search;
 		url = url.split("?")[1];
@@ -82,6 +82,9 @@ Esse é um típico exemplo de site a não ser desenvolvido.
 		});
 	};
 	getURL(window.location);
+	*/
+	const f = window.location.search.split("?")[1];
+	if(f === "perdi") window.location.href = "./perdi.html";
 
 
 
