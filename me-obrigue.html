@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<!--
+Esse é um típico exemplo de site a não ser desenvolvido.
+-->
+<html lang="pt-br"><head>
+	<meta charset="utf-8">
+	<meta name="google-site-verification" content="IdaENvYrWVDwLAFvajTKydfHtvxs4sNXkmAS9Nfkttg">
+	<meta name="theme-color" content="#3498db">
+	<title>Jocelino Alves</title>
+	<!-- <link rel="stylesheet" href="modal.css" media="all"> -->
+</head>
+<body style="width: 350px;text-align: center;margin: 0 auto;">
+  <div style="position: absolute;width: 350px;margin: 0 auto;">
+    <h1 style="margin-top: 80%;font-size: 60px;text-shadow: 1px 1px 1px red, -1px 2px 0px blue, 0px -2px 0px green;color: black;border: 1px solid white;background-color: rgba(255, 255, 255, 0.5);">Me obrigue!</h1>
+    <!-- <img src="./dist/img/dance.gif" alt="Me obrigue - GIF" id="imagegif"> -->
+  </div>
+
+
+<script type="text/javascript">
+
+  const imgs = ["dance", "SlipperyBonyFirecrest"];
+  const body = document.querySelector("body");
+  const img = document.querySelector("#imagegif");
+
+
+  window.onload = () => {
+    const src = `./dist/img/${imgs[ Math.floor( Math.random() * imgs.length) ]}.gif`
+    body.style.backgroundImage = `url(${src})`;
+    //img.src = src;
+  };
+
+</script>
+
+
+</body>
+</html>
