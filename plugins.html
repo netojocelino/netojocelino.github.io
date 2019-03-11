@@ -1,3 +1,7 @@
+---
+redirect_from: "index.html?plugin"
+---
+
 <!DOCTYPE html>
 <!--
 Esse é um típico exemplo de site a não ser desenvolvido.
@@ -12,7 +16,7 @@ Esse é um típico exemplo de site a não ser desenvolvido.
 	<!-- <link rel="stylesheet" href="modal.css" media="all"> -->
 </head>
 <body>
-<article class="modal" style="display:none;">
+<article class="modal">
 	  <button type="button" class="modal-close"></button>
 		<div class="modal-content">
 			<h2 class="modal-title">Título maneiro</h2>
@@ -47,28 +51,17 @@ Esse é um típico exemplo de site a não ser desenvolvido.
 			if(url.slice(0,1) == "#") e.preventDefault();
 		});
 	});
-
 	const modal = document.querySelector(".modal");
-
 	const modalclose = Array.from(modal.querySelectorAll(".modal-close"));
 	console.log(modalclose);
 	modalclose.forEach( m => m.addEventListener("click", (e) => {
 		e = e.target;
-
 		if( e.classList.contains("modal-close")){
 			e = e.parentNode;
 			e.style.display = "none";
-
 		}
 	}));
-
 	console.log("Esse é um típico exemplo de site a não ser desenvolvido.");
-
-
-
-
-
-/*
 	const getURL = (url) => {
 		url = url.search;
 		url = url.split("?")[1];
@@ -82,16 +75,6 @@ Esse é um típico exemplo de site a não ser desenvolvido.
 		});
 	};
 	getURL(window.location);
-	*/
-	const f = window.location.search.split("?")[1];
-	if(f === "perdi") window.location.href = "./perdi.html";
-
-
-
-
-
-
-
 	const plugins = [
 		{'id': 'cardception', 'name': 'CardCeption', 'description': 'A simple plugin',
 		'image': ['http://randomfox.ca/images/66.jpg'], 'author': 'Jocelino Neto'},
@@ -105,9 +88,7 @@ Esse é um típico exemplo de site a não ser desenvolvido.
   (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
   m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
   })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
-
   ga('create', 'UA-68994133-1', 'auto');
   ga('send', 'pageview');
-
 </script>
 </html>
