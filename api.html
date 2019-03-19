@@ -1,13 +1,11 @@
 <!DOCTYPE html>
 <html>
-
 <head>
   <meta charset="utf-8" />
   <title>API Test</title>
 </head>
-
 <body>
-
+  <h1>Hello, lets test a bit</h1>
 </body>
 
 
@@ -17,28 +15,21 @@ var requisicao = new XMLHttpRequest();
 requisicao.open("GET", "https://api.myjson.com/bins/1678pu", true);
 
 requisicao.onload = function() {
-  if (requisicao.status >= 200 && requisicao.status < 400) {
-    // Success!
+  if (requisicao.status >= 200 && requisicao.status < 400) { // Success!
     var data = JSON.parse(requisicao.responseText);
-
     console.log("< " + data.title + " >");
     console.log("Abra o link " + data.front);
     data.images.forEach(function(image){
       console.log("Imagem: " + image);
     });
-    
   } else {
     // We reached our target server, but it returned an error
-
   }
 };
-
 requisicao.onerror = function() {
   // There was a connection error of some sort
 };
-
 requisicao.send();
-
 </script>
 
 </html>
