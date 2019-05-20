@@ -1,0 +1,17 @@
+.align-menu{
+  width: 16rem;
+
+  .half-menu{
+    display: inline-block;
+    width: 45%;
+  }
+  .half-menu.half-menu__left,
+  .half-menu.half-menu__left legend{
+    text-align: left;
+  }
+  .half-menu.half-menu__right,
+  .half-menu.half-menu__right legend{
+    text-align: right;
+  }
+
+}
