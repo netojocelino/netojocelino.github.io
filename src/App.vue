@@ -1,5 +1,10 @@
 <script lang="ts">
+import VButton from './components/Button.vue'
+
 export default {
+    components: {
+        VButton,
+    },
     methods: {
         openLinkedIn() {
             const url = 'https://www.linkedin.com/in/netojocelino'
@@ -23,11 +28,19 @@ export default {
                 <h3>Fullstack developer</h3>
             </div>
 
-            <button @click="openLinkedIn" className="v-button v-button-outline-transparent" type="button"
-                value="LinkedIn">LinkedIn</button>
+            <v-button
+                @anchor="openLinkedIn"
+                styled="outline-transparent"
+                type="button"
+                label="LinkedIn"
+            />
 
-            <button @click="openGitHub" className="v-button v-button-outline-transparent" type="button"
-                value="GitHub">GitHub</button>
+            <v-button
+                @anchor="openGitHub"
+                styled="outline-transparent"
+                type="button"
+                label="GitHub"
+            />
 
         </header>
 
@@ -101,31 +114,6 @@ export default {
 
 .Header h1 {
     font-weight: bolder;
-}
-
-
-.v-button {
-    min-width: 10rem;
-    margin: 1rem;
-    padding: .5rem 1.5rem;
-
-    border-width: 1px;
-    border-color: var(--jt-button-main-border);
-    border-radius: .2rem;
-
-    background-color: var(--jt-main-white);
-
-    cursor: pointer;
-}
-
-.v-button:hover,
-.v-button:active {
-    box-shadow: 2px 2px 4px var(--jt-button-hover-border);
-    background-color: var(--jt-button-hover-background-color);
-}
-
-.v-button-outline-transparent {
-    background-color: var(--jt-main-white);
 }
 
 .Main-Content {

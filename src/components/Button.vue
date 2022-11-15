@@ -29,17 +29,29 @@ export default {
 
 
 <style scoped>
+
 .v-button {
-    padding: 0.5rem 3rem;
-    border-width: 0;
-    background-color: transparent;
-    margin: 0.5rem 2rem;
+    min-width: 10rem;
+    margin: 1rem;
+    padding: .5rem 1.5rem;
+
+    border-width: 1px;
+    border-color: var(--jt-button-main-border);
+    border-radius: .2rem;
+
+    background-color: var(--jt-main-white);
+
     cursor: pointer;
 }
 
+.v-button:hover,
+.v-button:active {
+    box-shadow: 2px 2px 4px var(--jt-button-hover-border);
+    background-color: var(--jt-button-hover-background-color);
+}
+
 .v-button-outline-transparent {
-    border: 1px solid black;
-    border-radius: 1rem;
+    background-color: var(--jt-main-white);
 }
 
 </style>
