@@ -5,6 +5,9 @@
     --jt-button-hover-border: #444;
 
     --jt-button-hover-background-color: #eee;
+
+    --jt-shadow-main-black: #333;
+    --jt-shadow-rgba-main-black: rgba(50, 50, 50, 0.5);
 }
 
 *,

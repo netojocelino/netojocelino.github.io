@@ -17,7 +17,7 @@ export default {
 
 <template>
     <main className="App">
-        <header class="Header">
+        <header className="Header">
             <div>
                 <h1>Jocelino Neto</h1>
                 <h3>Fullstack developer</h3>
@@ -32,22 +32,25 @@ export default {
         </header>
 
 
-        <section class="Main-Content">
+        <section className="Main-Content">
 
-            <div class="Descriptions">
-                <div class="Professional-Contact">
-                    <h2>Professional Contact</h2>
+            <div className="Descriptions">
+                <div className="Description-Card">
+                    <h2 className="Card-Title">Professional Contact</h2>
 
-                    <dl>
-                        <dt>email</dt>
-                        <dd>netoj96@live.com</dd>
-                    </dl>
+                    <div className="Card-Body">
+                        <span className="icon">@</span>
+                        <div class="details">
+                            <span>email</span>
+                            <span>netoj96@live.com</span>
+                        </div>
+                    </div>
                 </div>
 
-                <div class="Experiences-History">
-                    <h2>Experiences</h2>
+                <div className="Description-Card">
+                    <h2 className="Card-Title">Experiences</h2>
 
-                    <dl>
+                    <dl className="Card-Body">
                         <dt>City, State &mdash; Start Year - Final Year</dt>
                         <dd>
                             <details>
@@ -59,7 +62,7 @@ export default {
                     </dl>
                 </div>
             </div>
-            <div class="Side-Menu">
+            <div className="Side-Menu">
                 <aside>
                     <h2>Repositories</h2>
                     <dl>
@@ -122,5 +125,63 @@ export default {
     background-color: var(--jt-button-hover-background-color);
 }
 
-.v-button-outline-transparent {}
+.v-button-outline-transparent {
+    background-color: var(--jt-main-white);
+}
+
+.Main-Content {
+    display: flex;
+    flex-direction: row;
+    flex-grow: 1;
+    justify-content: space-around;
+}
+
+.Descriptions {
+    display: flex;
+    flex-direction: column;
+
+    width: max(50%, 53rem);
+}
+
+.Description-Card {
+    background-color: var(--jt-main-white);
+
+    box-shadow: 4px 4px 8px var(--jt-shadow-rgba-main-black);
+
+    padding: 1rem 1.5rem;
+    margin-top: 2rem;
+
+    display: flex;
+    flex-direction: column;
+}
+
+.Description-Card .Card-Title {
+    font-weight: normal;
+}
+
+.Description-Card .Card-Body {
+    display: flex;
+    flex-direction: row;
+}
+
+.Description-Card .Card-Body .icon {
+    font-size: 2.5rem;
+    user-select: none;
+}
+
+.Description-Card .Card-Body .details {
+    display: flex;
+    flex-direction: column;
+    margin: 0.5rem 0 0 0.5rem;
+}
+
+
+
+.Main-Content > .Side-Menu {
+    display: flex;
+    flex-direction: column;
+
+    width: max(30%, 26rem);
+}
+
 </style>
