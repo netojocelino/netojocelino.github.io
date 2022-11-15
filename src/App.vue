@@ -1,9 +1,11 @@
 <script lang="ts">
 import VButton from './components/Button.vue'
+import VHeader from './components/Header.vue'
 
 export default {
     components: {
         VButton,
+        VHeader,
     },
     methods: {
         openLinkedIn() {
@@ -22,27 +24,27 @@ export default {
 
 <template>
     <main className="App">
-        <header className="Header">
-            <div>
-                <h1>Jocelino Neto</h1>
-                <h3>Fullstack developer</h3>
-            </div>
-
-            <v-button
-                @anchor="openLinkedIn"
-                styled="outline-transparent"
-                type="button"
-                label="LinkedIn"
-            />
-
-            <v-button
-                @anchor="openGitHub"
-                styled="outline-transparent"
-                type="button"
-                label="GitHub"
-            />
-
-        </header>
+        
+        <v-header
+            title="Jocelino Neto"
+            subtitle="Fullstack developer"
+        >
+            <template v-slot:default>
+                <v-button
+                    @anchor="openLinkedIn"
+                    styled="outline-transparent"
+                    type="button"
+                    label="LinkedIn"
+                />
+    
+                <v-button
+                    @anchor="openGitHub"
+                    styled="outline-transparent"
+                    type="button"
+                    label="GitHub"
+                />
+            </template>
+        </v-header>
 
 
         <section className="Main-Content">
@@ -100,20 +102,6 @@ export default {
     display: flex;
     flex-direction: column;
     flex-wrap: wrap;
-}
-
-.Header {
-    margin: 1.5rem 1.5rem 1rem;
-    padding: 2rem 1.5rem;
-    border-radius: 0.2rem;
-
-    text-align: center;
-
-    background-color: var(--jt-main-white);
-}
-
-.Header h1 {
-    font-weight: bolder;
 }
 
 .Main-Content {

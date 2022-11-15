@@ -16,36 +16,29 @@ export default {
 </script>
 
 <template>
+    <header className="Header">
+            <div>
+                <h1>{{ title }}</h1>
+                <h3>{{ subtitle }}</h3>
+            </div>
+
+            <slot slot="default"></slot>
+        </header>
 </template>
 
 <style scoped>
-.header {
-  background-color: #FAFAFA;
-  text-align: center;
+.Header {
+    margin: 1.5rem 1.5rem 1rem;
+    padding: 2rem 1.5rem;
+    border-radius: 0.2rem;
 
-  font-family: Inter, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu,
-    Cantarell, 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif;
-  font-size: 15px;
-  text-rendering: optimizeLegibility;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+    text-align: center;
 
-  width: 100%;
+    background-color: var(--jt-main-white);
 }
 
-h1 {
-  font-weight: 500;
-  font-size: 2.6rem;
-  top: -10px;
-  color: #333;
-  font-weight: 600;
+.Header h1 {
+    font-weight: bolder;
 }
 
-h3 {
-  font-size: 1.2rem;
-  color: #333;
-}
-
-@media (min-width: 1024px) {
-}
 </style>
