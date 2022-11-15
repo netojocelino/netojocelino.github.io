@@ -62,20 +62,20 @@ export default {
                 </div>
             </div>
             <div className="Side-Menu">
-                <aside>
-                    <h2>Repositories</h2>
-                    <dl>
-                        <dt>Project Name</dt>
-                        <dd>last update. <a>open</a></dd>
-                    </dl>
-                </aside>
-                <aside>
-                    <h2>Events</h2>
-                    <dl>
-                        <dt>Event Name</dt>
-                        <dd>occours at. <a>open</a></dd>
-                    </dl>
-                </aside>
+                <div className="Menu-Block">
+                    <h2 className="Menu-Title">Repositories</h2>
+                    <div className="Menu-Item">
+                        <span className="Menu-Item-Title">Project Name</span>
+                        <span className="Menu-Item-Description">last update. <a>open</a></span>
+                    </div>
+                </div>
+                <div className="Menu-Block">
+                    <h2 className="Menu-Title">Events</h2>
+                    <div className="Menu-Item">
+                        <span className="Menu-Item-Title">Event Name</span>
+                        <span className="Menu-Item-Description">occours at. <a>open</a></span>
+                    </div>
+                </div>
             </div>
         </section>
 
@@ -194,4 +194,32 @@ export default {
     width: max(30%, 26rem);
 }
 
+.Menu-Block {
+    background-color: var(--jt-main-white);
+
+    box-shadow: 4px 4px 8px var(--jt-shadow-rgba-main-black);
+
+    padding: 1rem 1.5rem;
+    margin-top: 2rem;
+
+    display: flex;
+    flex-direction: column;
+}
+
+.Menu-Block .Menu-Item {
+    display: flex;
+    flex-direction: column;
+}
+
+.Menu-Item .Menu-Title {
+    font-weight: normal;
+}
+
+.Menu-Item .Menu-Item-Title {
+    font-size: 1.1rem;
+}
+
+.Menu-Item .Menu-Item-Description {
+    color: var(--jt-main-gray);
+}
 </style>
