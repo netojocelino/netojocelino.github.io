@@ -10,7 +10,29 @@
   font-weight: normal;
 }
 
-a {
-  text-decoration: none;
-  transition: 0.4s;
+a,
+a::after {
+    cursor: pointer;
+
+    text-decoration: none;
+    transition: 0.4s;
+
+    color: var(--jt-anchor-color-normal);
+
+    border-bottom-width: 1px;
+    border-bottom-style: dotted;
+    border-bottom-color: var(--jt-anchor-color-normal);
+}
+
+a:hover {
+    color: var(--jt-anchor-color-hover);
+    border-bottom-color: var(--jt-anchor-color-hover);
+    border-bottom-style: dashed;
+}
+
+a:visited,
+a:active {
+    color: var(--jt-anchor-color-visited);
+    border-bottom-style: solid;
+    border-bottom-color: var(--jt-anchor-color-visited);
 }

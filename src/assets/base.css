@@ -1,5 +1,6 @@
 :root {
     --jt-main-white: #FAFAFA;
+    --jt-main-gray: #666;
 
     --jt-button-main-border: #333;
     --jt-button-hover-border: #444;
@@ -8,6 +9,10 @@
 
     --jt-shadow-main-black: #333;
     --jt-shadow-rgba-main-black: rgba(50, 50, 50, 0.5);
+
+    --jt-anchor-color-normal: rgb(34, 170, 107);
+    --jt-anchor-color-hover: rgb(44, 153, 102);
+    --jt-anchor-color-visited: rgb(44, 153, 102);
 }
 
 *,

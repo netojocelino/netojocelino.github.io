@@ -40,7 +40,7 @@ export default {
 
                     <div className="Card-Body">
                         <span className="icon">@</span>
-                        <div class="details">
+                        <div className="details">
                             <span>email</span>
                             <span>netoj96@live.com</span>
                         </div>
@@ -51,14 +51,13 @@ export default {
                     <h2 className="Card-Title">Experiences</h2>
 
                     <dl className="Card-Body">
-                        <dt>City, State &mdash; Start Year - Final Year</dt>
-                        <dd>
-                            <details>
-                                <summary>Company Name</summary>
-                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
-                            </details>
-                        </dd>
-
+                        <div className="details">
+                            <a className="details-title" href="http://githubx.com/netojocelino/?repository" target="_blank">
+                                Company Name
+                            </a>
+                            <span className="details-subtitle">City, State &mdash; Start Year - Final Year</span>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+                        </div>
                     </dl>
                 </div>
             </div>
@@ -175,7 +174,18 @@ export default {
     margin: 0.5rem 0 0 0.5rem;
 }
 
+.Description-Card .Card-Body .details .details-title {
+    font-size: 1.2rem;
+}
+.Description-Card .Card-Body .details .details-subtitle {
+    font-size: 1rem;
+    color: var(--jt-main-gray);
+}
 
+.Description-Card .Card-Body .details p {
+    padding-top: .5rem;
+    padding-left: .5rem;
+}
 
 .Main-Content > .Side-Menu {
     display: flex;
