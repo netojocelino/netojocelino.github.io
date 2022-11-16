@@ -1,46 +1,65 @@
-# netojocelino-pages
+Olá. Sou Jocelino, um desenvolvedor fullstack. 
 
-This template should help get you started developing with Vue 3 in Vite.
+Meus passatempos são ler, assistir séries e jogar alguns jogos.
 
-## Recommended IDE Setup
 
-[VSCode](https://code.visualstudio.com/) + [Volar](https://marketplace.visualstudio.com/items?itemName=Vue.volar) (and disable Vetur) + [TypeScript Vue Plugin (Volar)](https://marketplace.visualstudio.com/items?itemName=Vue.vscode-typescript-vue-plugin).
 
-## Type Support for `.vue` Imports in TS
+* :telescope: Estou finalizando o curso de Bacharelado em Ciência da Computação na @ [UFS];
+* :zap: Atualmente estou em busca de emprego;
+* :hammer: Estou estudando conceitos de TDD e Código Limpo;
 
-TypeScript cannot handle type information for `.vue` imports by default, so we replace the `tsc` CLI with `vue-tsc` for type checking. In editors, we need [TypeScript Vue Plugin (Volar)](https://marketplace.visualstudio.com/items?itemName=Vue.vscode-typescript-vue-plugin) to make the TypeScript language service aware of `.vue` types.
 
-If the standalone TypeScript plugin doesn't feel fast enough to you, Volar has also implemented a [Take Over Mode](https://github.com/johnsoncodehk/volar/discussions/471#discussioncomment-1361669) that is more performant. You can enable it by the following steps:
+### Experiências
 
-1. Disable the built-in TypeScript Extension
-    1) Run `Extensions: Show Built-in Extensions` from VSCode's command palette
-    2) Find `TypeScript and JavaScript Language Features`, right click and select `Disable (Workspace)`
-2. Reload the VSCode window by running `Developer: Reload Window` from the command palette.
+* Trabalho voluntário de desenvolvedor utilizando WordPress na [SofTeam];
+* Desenvolvedor FullStack utilizando PHP, NodeJS e VueJS na [Visu]
 
-## Customize configuration
 
-See [Vite Configuration Reference](https://vitejs.dev/config/).
+### Linguagens e Ferramentas
 
-## Project Setup
+Linguagens: [JavaScript] e [TypeScript]
+Para Frontend: [VueJS] e [Bootstrap].
+Para Backend: [PHP], [Laravel] e [NodeJS].
+Banco de Dados: [MySQL].
+Ferramentas: [Docker], [Git] e [VSCode].
 
-```sh
-npm install
-```
 
-### Compile and Hot-Reload for Development
+### Me encontre nas redes
 
-```sh
-npm run dev
-```
+ - [LinkedIn] | [StackOverflow] | [Dev]
 
-### Type-Check, Compile and Minify for Production
 
-```sh
-npm run build
-```
+<details>
+  <summary>Junimos estão felizes por ajudar</summary>
+  <p>
+    <img src="https://stardewvalleywiki.com/mediawiki/images/5/57/Junimo.gif" width="100" alt="GIF with one Junimo - NPC from Stardew valley Game" />
+    <br /><legend>GIF com um <a href="https://stardewvalleywiki.com/Junimos">Junimo</a> - NPC do jogo <a href="https://stardewvalleywiki.com/">Stardew Valley</a></legend>
+  </p>
+</details>
 
-### Lint with [ESLint](https://eslint.org/)
 
-```sh
-npm run lint
-```
+
+
+
+
+[Dev]: https://dev.to/netojocelino
+[LinkedIn]: https://www.linkedin.com/in/netojocelino
+[SofTeam]: https://softeam.com.br/
+[StackOverflow]: https://stackoverflow.com/users/5228535/rogue-psycho
+[UFS]: https://www.sigaa.ufs.br/sigaa/public/curso/portal.jsf?lc=pt_BR&id=320143
+[Visu]: https://visu.cc/
+
+[JavaScript]: https://developer.mozilla.org/en-US/docs/Web/JavaScript
+[TypeScript]: https://www.typescriptlang.org/
+[VueJS]: https://vuejs.org/
+[Bootstrap]: https://getbootstrap.com/
+[PHP]: https://www.php.net/
+[Laravel]: https://laravel.com/
+[NodeJS]: https://nodejs.org/
+[MySQL]: https://mysql.com/
+[Docker]: https://docker.com
+[Git]: https://git-scm.com/
+[VSCode]: https://code.visualstudio.com/
+
+
+[Junimo]: https://stardewvalleywiki.com/Junimos
