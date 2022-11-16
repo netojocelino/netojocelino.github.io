@@ -58,6 +58,25 @@ export default {
     font-size: 1.1rem;
 }
 
+.Menu-Item .Menu-Item-Title::before {
+    display: block;
+
+    content: "";
+
+    float: left;
+
+    width: .5rem;
+    height: 2rem;
+    margin-right: .5rem;
+
+    background-color: var(--jt-green-border);
+    transition: .2s all;
+}
+
+.Menu-Item .Menu-Item-Title:hover::before {
+    width: .9rem;
+}
+
 .Menu-Item .Menu-Item-Description {
     color: var(--jt-main-gray);
 }

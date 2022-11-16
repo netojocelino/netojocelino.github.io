@@ -5,6 +5,8 @@ import VCardItem from './components/CardItem.vue'
 import VMenuItem from './components/ExternalMenuItem.vue'
 import VSideMenu from './components/SideMenu.vue'
 
+import api from './services/api'
+
 export default {
     components: {
         VButton,
@@ -13,28 +15,26 @@ export default {
         VMenuItem,
         VSideMenu,
     },
+    created() {
+        this.loadData()
+    },
     data() {
-        const repoitems = [
-            {
-                title: "Project Name",
-                description: "Last update.",
-                anchorTo: "https://github.com/netojocelino/?repository",
-                anchorTitle: "open",
-            },
-        ]
+        const repoitems: any[] = []
 
-        const repoevents = [
-            {
-                title: "Event Name",
-                description: "occours at",
-                anchorTo: "https://github.com/netojocelino/?repository",
-                anchorTitle: "open",
-            },
-        ]
+        const header = {
+            role: '',
+            status: '',
+            title: '',
+        }
+
+        const contacts: any[] = []
+        const experiences: any[] = []
 
         return {
+            contacts,
+            experiences,
+            header,
             repoitems,
-            repoevents,
         }
     },
     methods: {
@@ -46,6 +46,22 @@ export default {
             const url = 'https://github.com/netojocelino'
             window.open(url, '_blank')
         },
+        async loadData() {
+            const data = await api.about()
+
+            this.header = data.header
+            this.contacts = data.contacts
+            this.experiences = data.experiences
+            this.repoitems = data.repoitems
+        },
+
+        experienceDetails(experience: { location: String, startAt: String, ends: String }) {
+            const startedAt = new Date(experience.startAt.toString()).getUTCFullYear()
+            const endedAt = new Date(experience.ends.toString()).getUTCFullYear()
+
+            return `${experience.location} — ${startedAt} - ${endedAt}`
+
+        },
     },
 }
 </script>
@@ -53,7 +69,7 @@ export default {
 <template>
     <main className="App">
 
-        <v-header title="Jocelino Neto" subtitle="Fullstack developer">
+        <v-header :title="header.title" :subtitle="header.role">
             <template v-slot:default>
                 <v-button @anchor="openLinkedIn" styled="outline-transparent" type="button" label="LinkedIn" />
 
@@ -68,22 +84,28 @@ export default {
                 <div className="Description-Card">
                     <h2 className="Card-Title">Professional Contact</h2>
 
-                    <v-card-item icon="@" item-key="email" item-value="netoj96@live.com" />
+                    <v-card-item
+                        v-for="(contact, index) in contacts"
+                        :key="index"
+                        :icon="contact.icon"
+                        :item-key="contact.key"
+                        :item-value="contact.value"
+                    />
                 </div>
 
                 <div className="Description-Card">
                     <h2 className="Card-Title">Experiences</h2>
 
-                    <v-card-item details-title="Company Name"
-                        details-anchor="https://github.com/netojocelino/?repository"
-                        details-subtitle="City, State &mdash; Start Year - Final Year"
-                        details-paragraph="Lorem ipsum dolor sit amet, consectetur adipisicing elit." />
+                    <v-card-item
+                        v-for="(company, index) in experiences"
+                        :details-title="`${company.role} @ ${company.name}`"
+                        :details-anchor="company.link"
+                        :details-subtitle="company.workForLong"
+                        :details-paragraph="company.details" />
                 </div>
             </div>
             <div className="Side-Menu">
                 <v-side-menu title="Repository" :items="repoitems" />
-
-                <v-side-menu title="Events" :items="repoevents" />
             </div>
         </section>
 

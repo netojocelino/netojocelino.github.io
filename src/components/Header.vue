@@ -28,8 +28,8 @@ export default {
 
 <style scoped>
 .Header {
-    margin: 1.5rem 1.5rem 1rem;
-    padding: 2rem 1.5rem;
+    margin: .5rem 1.5rem .5rem;
+    padding: 1.5rem 1rem;
     border-radius: 0.2rem;
 
     text-align: center;
