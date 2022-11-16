@@ -3,6 +3,7 @@ import VButton from './components/Button.vue'
 import VHeader from './components/Header.vue'
 import VCardItem from './components/CardItem.vue'
 import VMenuItem from './components/ExternalMenuItem.vue'
+import VSideMenu from './components/SideMenu.vue'
 
 export default {
     components: {
@@ -10,6 +11,31 @@ export default {
         VCardItem,
         VHeader,
         VMenuItem,
+        VSideMenu,
+    },
+    data() {
+        const repoitems = [
+            {
+                title: "Project Name",
+                description: "Last update.",
+                anchorTo: "https://github.com/netojocelino/?repository",
+                anchorTitle: "open",
+            },
+        ]
+
+        const repoevents = [
+            {
+                title: "Event Name",
+                description: "occours at",
+                anchorTo: "https://github.com/netojocelino/?repository",
+                anchorTitle: "open",
+            },
+        ]
+
+        return {
+            repoitems,
+            repoevents,
+        }
     },
     methods: {
         openLinkedIn() {
@@ -26,25 +52,12 @@ export default {
 
 <template>
     <main className="App">
-        
-        <v-header
-            title="Jocelino Neto"
-            subtitle="Fullstack developer"
-        >
+
+        <v-header title="Jocelino Neto" subtitle="Fullstack developer">
             <template v-slot:default>
-                <v-button
-                    @anchor="openLinkedIn"
-                    styled="outline-transparent"
-                    type="button"
-                    label="LinkedIn"
-                />
-    
-                <v-button
-                    @anchor="openGitHub"
-                    styled="outline-transparent"
-                    type="button"
-                    label="GitHub"
-                />
+                <v-button @anchor="openLinkedIn" styled="outline-transparent" type="button" label="LinkedIn" />
+
+                <v-button @anchor="openGitHub" styled="outline-transparent" type="button" label="GitHub" />
             </template>
         </v-header>
 
@@ -55,46 +68,22 @@ export default {
                 <div className="Description-Card">
                     <h2 className="Card-Title">Professional Contact</h2>
 
-                    <v-card-item
-                        icon="@"
-                        item-key="email"
-                        item-value="netoj96@live.com"
-                    />
+                    <v-card-item icon="@" item-key="email" item-value="netoj96@live.com" />
                 </div>
 
                 <div className="Description-Card">
                     <h2 className="Card-Title">Experiences</h2>
 
-                    <v-card-item
-                        details-title="Company Name"
+                    <v-card-item details-title="Company Name"
                         details-anchor="https://github.com/netojocelino/?repository"
                         details-subtitle="City, State &mdash; Start Year - Final Year"
-                        details-paragraph="Lorem ipsum dolor sit amet, consectetur adipisicing elit."
-                    />
+                        details-paragraph="Lorem ipsum dolor sit amet, consectetur adipisicing elit." />
                 </div>
             </div>
             <div className="Side-Menu">
-                <div className="Menu-Block">
-                    <h2 className="Menu-Title">Repositories</h2>
+                <v-side-menu title="Repository" :items="repoitems" />
 
-                    <v-menu-item
-                        title="Project Name"
-                        description="Last update."
-                        anchor-to="https://github.com/netojocelino/?repository"
-                        anchor-title="open"
-                    />
-                    
-                </div>
-                <div className="Menu-Block">
-                    <h2 className="Menu-Title">Events</h2>
-                    <v-menu-item
-                        title="Event Name"
-                        description="occours at"
-                        anchor-to="https://github.com/netojocelino/?repository"
-                        anchor-title="open"
-                    />
-                    
-                </div>
+                <v-side-menu title="Events" :items="repoevents" />
             </div>
         </section>
 
@@ -138,24 +127,10 @@ export default {
     font-weight: normal;
 }
 
-
-
 .Main-Content > .Side-Menu {
     display: flex;
     flex-direction: column;
 
     width: max(30%, 26rem);
-}
-
-.Menu-Block {
-    background-color: var(--jt-main-white);
-
-    box-shadow: 4px 4px 8px var(--jt-shadow-rgba-main-black);
-
-    padding: 1rem 1.5rem;
-    margin-top: 2rem;
-
-    display: flex;
-    flex-direction: column;
 }
 </style>

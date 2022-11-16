@@ -1,5 +1,13 @@
 <script lang="ts">
 export default {
+    computed: {
+        hasAnchor() {
+            return this.$props.anchorTo !== undefined && this.$props.anchorTitle !== undefined
+        },
+        hasDescription() {
+            return this.$props.description !== undefined
+        },
+    },
     props: {
         title: {
             type: String,
@@ -25,10 +33,10 @@ export default {
 <template>
 <div className="Menu-Item">
     <span className="Menu-Item-Title">{{ title }}</span>
-    <span className="Menu-Item-Description" v-if="description !== undefined">
+    <span className="Menu-Item-Description" v-if="hasDescription">
         {{ description }}
         <a
-            v-if="anchorTo !== undefined && anchorTitle !== undefined"
+            v-if="hasAnchor"
             :href="anchorTo"
             target="_blank"
         > {{ anchorTitle }} </a>
