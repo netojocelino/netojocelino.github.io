@@ -1,0 +1,20 @@
+image: node:16.15.1
+pages:
+  stage: deploy
+  cache:
+    key:
+      files:
+        - package-lock.json
+      prefix: npm
+    paths:
+      - node_modules/
+  script:
+    - npm install --progress=false
+    - npm run build
+    - cp -a dist/. public/
+  artifacts:
+    expire_in: 1 week
+    paths:
+      - public
+  rules:
+    - if: $CI_COMMIT_BRANCH == $CI_DEFAULT_BANCH
