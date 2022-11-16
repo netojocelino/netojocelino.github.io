@@ -2,12 +2,14 @@
 import VButton from './components/Button.vue'
 import VHeader from './components/Header.vue'
 import VCardItem from './components/CardItem.vue'
+import VMenuItem from './components/ExternalMenuItem.vue'
 
 export default {
     components: {
         VButton,
         VCardItem,
         VHeader,
+        VMenuItem,
     },
     methods: {
         openLinkedIn() {
@@ -65,7 +67,7 @@ export default {
 
                     <v-card-item
                         details-title="Company Name"
-                        details-anchor="http://githubx.com/netojocelino/?repository"
+                        details-anchor="https://github.com/netojocelino/?repository"
                         details-subtitle="City, State &mdash; Start Year - Final Year"
                         details-paragraph="Lorem ipsum dolor sit amet, consectetur adipisicing elit."
                     />
@@ -74,17 +76,24 @@ export default {
             <div className="Side-Menu">
                 <div className="Menu-Block">
                     <h2 className="Menu-Title">Repositories</h2>
-                    <div className="Menu-Item">
-                        <span className="Menu-Item-Title">Project Name</span>
-                        <span className="Menu-Item-Description">last update. <a>open</a></span>
-                    </div>
+
+                    <v-menu-item
+                        title="Project Name"
+                        description="Last update."
+                        anchor-to="https://github.com/netojocelino/?repository"
+                        anchor-title="open"
+                    />
+                    
                 </div>
                 <div className="Menu-Block">
                     <h2 className="Menu-Title">Events</h2>
-                    <div className="Menu-Item">
-                        <span className="Menu-Item-Title">Event Name</span>
-                        <span className="Menu-Item-Description">occours at. <a>open</a></span>
-                    </div>
+                    <v-menu-item
+                        title="Event Name"
+                        description="occours at"
+                        anchor-to="https://github.com/netojocelino/?repository"
+                        anchor-title="open"
+                    />
+                    
                 </div>
             </div>
         </section>
@@ -148,22 +157,5 @@ export default {
 
     display: flex;
     flex-direction: column;
-}
-
-.Menu-Block .Menu-Item {
-    display: flex;
-    flex-direction: column;
-}
-
-.Menu-Item .Menu-Title {
-    font-weight: normal;
-}
-
-.Menu-Item .Menu-Item-Title {
-    font-size: 1.1rem;
-}
-
-.Menu-Item .Menu-Item-Description {
-    color: var(--jt-main-gray);
 }
 </style>
