@@ -155,4 +155,19 @@ export default {
 
     width: max(30%, 26rem);
 }
+
+@media (max-width: 1310px)
+{
+    .Main-Content {
+        flex-direction: column;
+        align-items: stretch;
+        align-self: center;
+        width: max(96%, 53rem);
+    }
+
+    .Main-Content > .Side-Menu,
+    .Descriptions {
+        width: 100%;
+    }
+}
 </style>
