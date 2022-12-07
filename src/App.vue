@@ -44,6 +44,10 @@ export default {
       const url = "https://github.com/netojocelino";
       window.open(url, "_blank");
     },
+    openDevTo() {
+      const url = "https://dev.to/netojocelino";
+      window.open(url, "_blank");
+    },
     async loadData() {
       const data = await api.about();
 
@@ -85,6 +89,13 @@ export default {
           styled="outline-transparent"
           type="button"
           label="GitHub"
+        />
+
+        <v-button
+          @anchor="openDevTo"
+          styled="outline-transparent"
+          type="button"
+          label="DevTo"
         />
       </template>
     </v-header>
