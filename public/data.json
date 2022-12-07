@@ -5,7 +5,7 @@
         {
             "key": "email",
             "icon": "@",
-            "value": "netoj96@hotmail.com"
+            "value": "svg:/EMAIL.svg"
         }
     ],
     "professional": {

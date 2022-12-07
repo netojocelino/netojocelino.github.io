@@ -26,6 +26,15 @@ export default {
 
       return (hasAnchor && hasTitle) || hasSubtitle || hasParagraph;
     },
+    isSVG() {
+      return this.itemValue?.indexOf("svg:") === 0;
+    },
+    getValue() {
+      if (this.isSVG) {
+        return this.itemValue?.split("svg:")[1];
+      }
+      return this.itemValue;
+    },
   },
   props: {
     icon: {
@@ -70,7 +79,10 @@ export default {
         className="details"
       >
         <span>{{ itemKey }}</span>
-        <span>{{ itemValue }}</span>
+        <span v-if="isSVG"
+          ><img class="image-contact" :src="getValue" alt="Get in Touch"
+        /></span>
+        <span v-else>{{ itemValue }}</span>
       </div>
     </template>
     <template v-else>
@@ -113,5 +125,9 @@ export default {
 .Card-Body .details p {
   padding-top: 0.5rem;
   padding-left: 0.5rem;
+}
+
+.image-contact {
+  width: 200px;
 }
 </style>
