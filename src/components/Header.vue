@@ -6,39 +6,38 @@ export default {
     },
     subtitle: {
       type: String,
-      default: '',
+      default: "",
       validator(value: string) {
-        return (typeof value) === 'string'
-      }
+        return typeof value === "string";
+      },
     },
-  }
-}
+  },
+};
 </script>
 
 <template>
-    <header className="Header">
-            <div>
-                <h1>{{ title }}</h1>
-                <h3>{{ subtitle }}</h3>
-            </div>
+  <header className="Header">
+    <div>
+      <h1>{{ title }}</h1>
+      <h3>{{ subtitle }}</h3>
+    </div>
 
-            <slot slot="default"></slot>
-        </header>
+    <slot slot="default"></slot>
+  </header>
 </template>
 
 <style scoped>
 .Header {
-    margin: .5rem 1.5rem .5rem;
-    padding: 1.5rem 1rem;
-    border-radius: 0.2rem;
+  margin: 0.5rem 1.5rem 0.5rem;
+  padding: 1.5rem 1rem;
+  border-radius: 0.2rem;
 
-    text-align: center;
+  text-align: center;
 
-    background-color: var(--jt-main-white);
+  background-color: var(--jt-main-white);
 }
 
 .Header h1 {
-    font-weight: bolder;
+  font-weight: bolder;
 }
-
 </style>
