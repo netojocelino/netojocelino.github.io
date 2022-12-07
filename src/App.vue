@@ -1,5 +1,5 @@
 <script lang="ts">
-import VButton from "./components/Button.vue";
+import VButton from "./components/VButton.vue";
 import VHeader from "./components/Header.vue";
 import VCardItem from "./components/CardItem.vue";
 import VSideMenu from "./components/SideMenu.vue";
