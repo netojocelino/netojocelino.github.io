@@ -1,0 +1,50 @@
+{
+    "name": "Jocelino Neto",
+    "role": "Fullstack developer",
+    "contact": [
+        {
+            "key": "email",
+            "icon": "@",
+            "value": "svg:/EMAIL.svg"
+        }
+    ],
+    "professional": {
+        "status": "open to work"
+    },
+    "company": [
+      {
+        "role": "Full Stack Developer",
+        "link": "https://visu.cc",
+        "name": "AGP Agencia Digital",
+        "startAt": "2020-02-11",
+        "ends": "2022-09-30",
+        "details": "",
+        "location": "Aracaju - Sergipe",
+        "stack": [ "PHP", "Eloquent", "MariaDB", "Javascript", "NodeJS", "VueJS", "CSS" ]
+       },
+      {
+        "role": "Volunteer Full Stack Developer",
+        "link": "https://softeam.com.br",
+        "name": "Softeam Empresa Júnior",
+        "startAt": "2015-02-01",
+        "ends": "2019-09-10",
+        "details": "",
+        "location": "Aracaju - Sergipe",
+        "stack": [ "PHP", "WordPress", "MariaDB", "Javascript", "CSS" ]
+       }
+    ],
+    "repositories": [
+        {
+            "id": 508869381,
+            "name": "netojocelino/bluebox",
+            "html_url": "https://github.com/netojocelino/bluebox",
+            "description": "Apenas um teste para utilizar chamadas com axios para envio de emails pelo Sendinblue https://sendinblue.com"
+        },
+        {
+            "id": 545180771,
+            "name": "netojocelino/na-trave",
+            "html_url": "https://github.com/netojocelino/na-trave",
+            "description": "Projeto realizado durante o Full Stack Challenge — Edição Copa da Codar.me https://codar.me/full-stack-challenge"
+        }
+    ]
+  }
